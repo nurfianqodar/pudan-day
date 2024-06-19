@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
+import Image from "next/image";
+import pudanImage from "@/public/pudan.jpg";
+import pudanImage2 from "@/public/pudan2.jpg";
 
 const OutOfTheBoxPage = () => {
   return (
-    <main className="px-5 pt-20 pb-32">
-      <h1 className="text-4xl mb-7  ">Hehehe...</h1>
+    <main className="px-5 pt-20 pb-32 flex flex-col items-center justify-center bg-mpurple-200">
+      <h1 className="text-4xl mb-7 text-center text-mpurple-50">Hehehe...</h1>
       <div className="flex flex-col items-center justify-center gap-y-6">
-        <iframe
-          src="https://www.youtube.com/embed/9CeLkkWt5js?si=rnA8rMo3vu6bcMHz"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/u50UCzk0u7Y?si=KvhhDslt9TwANeIp"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        <Image
+          className="w-full max-w-md"
+          src={pudanImage}
+          alt="gambar bocil"
+        />
+        <Image
+          className="w-full max-w-md"
+          src={pudanImage2}
+          alt="gambar bocil"
+        />
+        <audio
+          className="w-full max-w-md"
+          src="/audio/mang-adeng.mp3"
+          autoPlay
+        />
       </div>
     </main>
   );
