@@ -63,7 +63,7 @@ const Menu = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="z-10 fixed w-full bg-mpurple-300/70 h-svh backdrop-blur-sm top-0 left-0 right-0"
+            className="z-10 fixed w-full bg-mpurple-300/70 h-svh backdrop-blur-sm top-0 left-0 right-0 flex items-center justify-center"
           >
             <motion.ul
               className="flex flex-wrap items-center justify-evenly my-16 gap-5"
@@ -76,6 +76,7 @@ const Menu = () => {
                 return (
                   <motion.li variants={child}>
                     <Link
+                      onClick={() => setIsOpen(false)}
                       href={item.href}
                       key={index}
                       className="bg-mpurple-50 py-4 px-6 rounded-2xl flex flex-col items-center justify-center gap-1"
